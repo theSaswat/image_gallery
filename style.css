@@ -1,1 +1,111 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: none;
+  background: linear-gradient(
+    67deg,
+    #32a852,
+    #349ba8,
+    #343ca8,
+    #8734a8,
+    #a8324c,
+    #a86132,
+    #c0d128
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  transition: transform 0.3s;
+  /* max-width: 25%; */
+}
+
+.img-box {
+  height: 17rem;
+  width: 17rem;
+  object-fit: cover;
+  margin: 2px;
+  border-radius: 4px;
+  margin: 1rem;
+  /* box-shadow: 5px 5px 20px #747474; */
+  /* border: 3px groove #d6d6d6; */
+}
+
+.img-box:hover {
+  opacity: 0.6;
+}
+
+.column:hover {
+  transform: scale(1.1);
+}
+
+.column {
+  position: relative;
+  display: inline-block;
+}
+
+.column .tooltip-text {
+  /* visibility: hidden; */
+  width: 12rem;
+  height: min-content;
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px 3px;
+  padding: 2px;
+  font-size: medium;
+  transition: opacity 0.6s;
+  opacity: 0;
+  /* Position the tooltip */
+  position: absolute; 
+  z-index: 700;
+  top: 5rem;
+  left: 2rem;
+}
+
+.column:hover .tooltip-text,
+.column:hover .btn {
+  /* visibility: visible; */
+  opacity: .7;
+}
+
+
+.btn {
+  position: absolute;
+  left: 7rem;
+  top: 10rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .6s ease;
+  width: 6rem;
+  height: 2.5rem;
+  color: #dbdbdbf5;
+  background-color: #1a1a1a9f;
+  border-radius: 2.5rem;
+  z-index: 1;
+  border: none;
+}
+
+.container h1 {
+  text-align: center;
+  color: #e0e0e0;
+  font-weight: 100;
+  padding: 2px 5px;
+}
